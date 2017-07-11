@@ -1,0 +1,3 @@
+# compiles site files
+_site/
+.sass-cache/
