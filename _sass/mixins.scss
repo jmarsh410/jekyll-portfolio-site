@@ -1,0 +1,28 @@
+
+// Colors
+$black: 			#000;
+$white: 			#fff;
+$red: 				#d82a2a;
+$lgray: 			#ebebeb;
+$gray: 				#666;
+$dgray: 			#333;
+$blue: 				#2a3039;
+
+// Fonts
+$robo: 				"Roboto", Arial, sans-serif;
+$pt: 				"Pt Sans", Arial, sans-serif;
+
+$phone-width: 93.75%; /* 300/320= .9375 */
+$tablet-width: 91.3043478%; /* 420/460 */
+$desktop-width: 940px;
+$tablet-process: 60%;
+$desktop-process: 600px;
+
+@mixin gradient($startColor, $endColor) {
+	background-color: $startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background: -webkit-linear-gradient(top, $startColor, $endColor);
+	background: -moz-linear-gradient(top, $startColor, $endColor);
+	background: -ms-linear-gradient(top, $startColor, $endColor);
+	background: -o-linear-gradient(top, $startColor, $endColor);
+}
