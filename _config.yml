@@ -1,0 +1,11 @@
+collections:
+  work:
+    output: true
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "work"
+    values:
+      layout: "work"
+
