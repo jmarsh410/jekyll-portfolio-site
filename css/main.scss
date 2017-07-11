@@ -1,3 +1,6 @@
+---
+---
+
 @import "mixins.scss";
 
 .clear:after {
@@ -185,7 +188,7 @@ section.work-wrap {
 		margin-bottom: 15px;
 		box-sizing: border-box;
 		border: 1px solid #ccc;
-		box-shadow( 0 5px rgba(150,150,150,.75);
+		box-shadow: 0 5px rgba(150,150,150,.75);
 		img {
 			width: 100%;
 			height: auto;
@@ -220,7 +223,7 @@ section.work-wrap {
 section.about {
 	width: 100%;
 	background: $white;
-	box-shadow 0 -5px 10px rgba(0,0,0,.75);
+	box-shadow: 0 -5px 10px rgba(0,0,0,.75);
 	overflow: hidden;
 	padding: 0 0 0em;
 	.bio-wrap {
@@ -421,7 +424,7 @@ footer {
 
 
 // MEDIA QUERIE FOR 480 TO 767 - LANDSCAPE PHONE
-$media screen and (min-width: 480px)  { /* REMOVED and (max-width: 767px) SO THAT THE STYLES THAT I CHANGED WOULD TAKE EFFECT IN NEXT MEDIA QUERIE */
+@media screen and (min-width: 480px)  { /* REMOVED and (max-width: 767px) SO THAT THE STYLES THAT I CHANGED WOULD TAKE EFFECT IN NEXT MEDIA QUERIE */
 
 // Headings
 h1 {
