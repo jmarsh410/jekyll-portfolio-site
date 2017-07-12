@@ -1,0 +1,104 @@
+// WORK - HOMEPAGE
+.work-wrap {
+  width: 100%;
+  background: $white;
+  box-shadow: 0 -5px 10px rgba(0,0,0,.75);
+  overflow: hidden;
+  padding: 0 0 3%;
+  .work {
+    width: $phone-width;
+    margin: 0 auto;
+  }
+  .project {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px 0 rgba(150,150,150,.75);
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .overlay {
+      display: block;
+      width: 100%;
+      background: $white;
+      position: absolute;
+      bottom: 0px;
+      box-sizing: border-box;
+      padding: 0 5%; /* 15/300 */
+      .tags {
+        color: $gray;
+        font-family: Century, serif;
+        margin: 5px 0;
+        display: block;
+      }
+    }
+  }
+  .hidden-projects {
+    display: none;
+  }
+}
+
+// MEDIA QUERIE FOR 480 TO 767 - LANDSCAPE PHONE
+@media screen and (min-width: 480px)  { /* REMOVED and (max-width: 767px) SO THAT THE STYLES THAT I CHANGED WOULD TAKE EFFECT IN NEXT MEDIA QUERIE */
+  // WORK - HOMEPAGE
+  .work-wrap {
+    .work {
+      width: $tablet-width;
+    }
+    .projects-wrap {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .project {
+      width: 46.4285714%; /* 195/420=.464285714 */
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // WORK - HOMEPAGE
+  .work-wrap {
+    .project {
+      width: 46.4285714%; /* 195/420=.464285714 */
+      .overlay {
+        .tags {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  // WORK - HOMEPAGE
+  .work-wrap {
+    .work {
+      min-width: $desktop-width;
+      width: $desktop-width;
+    }
+    .project {
+      img {
+        display: block;
+      }
+      overflow: hidden;
+      width: 23.4042553%; /* 220/940=.234042553 */
+      .overlay {
+        transition: all .2s ease;
+        transform: translate(0, 100%);
+        .tags {
+          font-size: 14px;
+        }
+      }
+      &:hover {
+        .overlay {
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+}
