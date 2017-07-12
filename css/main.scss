@@ -2,6 +2,9 @@
 ---
 
 @import "mixins.scss";
+@import "normalize.scss";
+
+@import "work.scss";
 
 .clear:after {
      visibility: hidden;
@@ -31,7 +34,7 @@ html {
 
 body {
 	font-family: $pt;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 // Headings
@@ -73,7 +76,6 @@ p {
 	text-align: left;
 	line-height: 1.5;
 }
-// tags
 
 header {
 	background: $black;
@@ -131,7 +133,7 @@ header {
 			text-shadow: 2px 2px 0 #000;
 			line-height: 25px;
 		}
-		.more-about {
+		.blurb-about {
 			text-align: center;
 			display: block;
 			margin: auto 0;
@@ -141,7 +143,7 @@ header {
 }
 
 // RESUME
-section.resume-wrap {
+.resume-wrap {
 	background: url(../images/about-desktop.jpg) no-repeat 50% 50%;
 	background-size: cover;
 	padding: 30px 0;
@@ -167,60 +169,13 @@ section.resume-wrap {
 	}
 }
 
-// WORK - HOMEPAGE
-section.work-wrap {
-	width: 100%;
-	background: $white;
-	box-shadow: 0 -5px 10px rgba(0,0,0,.75);
-	overflow: hidden;
-	padding: 0 0 3%;
-	.work {
-		width: $phone-width;
-		margin: 0 auto;
-	}
-	.icon-wrap {
-		display: none;
-	}
-	a.project {
-		position: relative;
-		display: block;
-		width: 100%;
-		margin-bottom: 15px;
-		box-sizing: border-box;
-		border: 1px solid #ccc;
-		box-shadow: 0 5px rgba(150,150,150,.75);
-		img {
-			width: 100%;
-			height: auto;
-		}
-		span.overlay {
-			display: block;
-			width: 100%;
-			background: $white;
-			position: absolute;
-			bottom: 0px;
-			box-sizing: border-box;
-			padding: 0 5%; /* 15/300 */
-			span.tags {
-				color: $gray;
-				font-family: Century, serif;
-				margin: 5px 0;
-				display: block;
-			}
-		}
-	}
-	.hidden-projects {
-		display: none;
-	}
-}
-
 .gray-bg {
 	background: #ebebeb;
 	overflow: hidden;
 }
 
 // ABOUT 
-section.about {
+.about {
 	width: 100%;
 	background: $white;
 	box-shadow: 0 -5px 10px rgba(0,0,0,.75);
@@ -283,7 +238,7 @@ section.about {
 }
 
 // SINGLE PROJECT 
-section.single-project {
+.single-project {
 	width: 100%;
 	overflow: hidden;
 	padding: 0 0 0%;
@@ -307,6 +262,7 @@ section.single-project {
 			}
 		}
 	}
+	.project-content,
 	.description {
 		max-width: $desktop-process;
 		margin: 0 auto;
@@ -402,9 +358,6 @@ footer {
 		min-height: 115px;
 	}
 	input:focus, textarea:focus {
-		// -moz-box-shadow: inset 0 0 10px rgba(219,79,79,.45);
-		// -webkit-box-shadow: inset 0 0 10px rgba(219,79,79,.45);
-		// box-shadow: inset 0 0 10px rgba(219,79,79,.45);
 		border: 1px solid $red;
 	}
 	input#submit {
@@ -474,27 +427,10 @@ header {
 	}
 }
 
-// WORK - HOMEPAGE
-section.work-wrap {
-	.work {
-		width: $tablet-width;
-	}
-	a.project {
-		width: 46.4285714%; /* 195/420=.464285714 */
-		float: left;
-		margin-bottom: 07.1428571%;
-		margin-left: 07.1428571%; /* 30/420=.071428571 */
-		&:first-child {
-			margin-left: 0;
-		}
-		&:nth-child(2n-1) {
-			margin-left: 0;
-		}
-	}
-}
+
 
 // ABOUT 
-section.about {
+.about {
 	.bio-wrap {
 		width: $tablet-width;
 		margin-bottom: 20px;
@@ -544,7 +480,7 @@ section.about {
 }
 
 // SINGLE PROJECT 
-section.single-project {
+.single-project {
 	.hero-wrap {
 		padding: 0 0 20px;
 		.hero {
@@ -622,7 +558,7 @@ header {
 	padding: 45px 0; /* probably want to convert to percents */
 	.blurb {
 		text-align: center;
-		.more-about {
+		.blurb-about {
 			text-align: center;
 			display: block;
 			width: 200px;
@@ -645,7 +581,7 @@ header {
 }
 
 // RESUME
-section.resume-wrap {
+.resume-wrap {
 	display: block;
 	padding: 45px 0;
 	.resume {
@@ -683,60 +619,8 @@ section.resume-wrap {
 	}
 }
 
-// WORK - HOMEPAGE
-section.work-wrap {
-	.work {
-		width: $tablet-width;
-	}
-	.icon-wrap {
-		display: block;
-		margin: 0 auto 5%;
-		width: 60%;
-		#ux {
-			background-image: url(../images/icon-ux.png);
-		}
-		#design {
-			background-image: url(../images/icon-design.png);
-		}
-		#dev {
-			background-image: url(../images/icon-dev.png);
-		}
-		.icon {
-			text-indent: -9999px;
-			float: left;
-			display: block;
-			width: 31%; /* 130/420=.30952381 */
-			height: 0;
-			padding-bottom: 23.45%; /* technique for responsize sprites */
-			background-size: 100% auto !important;
-			background-position: 0 0;
-			margin-left: 3.5%; /* 12/420=.028571429 */
-			&:first-child {
-				margin-left: 0;
-			}
-			&:hover, &.icon-active {
-				background-position: 0 100%;
-			}
-		}
-	}
-	a.project {
-		width: 46.4285714%; /* 195/420=.464285714 */
-		float: left;
-		margin-bottom: 07.1428571%;
-		margin-left: 07.1428571%; /* 30/420=.071428571 */
-		&:first-child {
-			margin-left: 0;
-		}
-		span.overlay {
-			span.tags {
-				font-size: 14px;
-			}
-		}
-	}
-}
-
 // ABOUT 
-section.about {
+.about {
 	.bio-wrap {
 		width: $tablet-width;
 		margin-bottom: 2em;
@@ -785,7 +669,7 @@ section.about {
 }
 
 // SINGLE PROJECT 
-section.single-project {
+.single-project {
 	.hero-wrap {
 		padding: 0 0 20px;
 		.hero {
@@ -897,7 +781,7 @@ header {
 			font-size: 42px;
 			line-height: 69px;
 		}
-		.more-about {
+		.blurb-about {
 			width: 300px;
 			height: 50px;
 			line-height: 50px;
@@ -910,7 +794,7 @@ header {
 }
 
 // RESUME
-section.resume-wrap {
+.resume-wrap {
 	padding: 70px 0;
 	.resume {
 		width: $desktop-width;
@@ -931,48 +815,10 @@ section.resume-wrap {
 	}
 }
 
-// WORK - HOMEPAGE
-section.work-wrap {
-	.work {
-		min-width: $desktop-width;
-		width: $desktop-width;
-	}
-	.icon-wrap {
-		width: 40%;
-	}
-	a.project {
-		img {
-			display: block;
-		}
-		overflow: hidden;
-		width: 23.4042553%; /* 220/940=.234042553 */
-		margin-bottom: 15px;
-		margin-left: 02.1276596%; /* 20/940=.021276596 */
-		margin-bottom: 02.1276596%; /* 20/940=.021276596 */
-		&:nth-child(2n-1) {
-			margin-left: 02.1276596%; /* 20/940=.021276596 */
-		}
-		&:nth-child(4n-3) {
-			margin-left: 0%; /* 20/940=.021276596 */
-		}
-		span.overlay {
-			transition: all .2s ease;
-			transform: translate(0 100%);
-			span.tags {
-				font-size: 14px;
-			}
-		}
-		&:hover {
-			span.overlay {
-				transform: translate(0 0);
-			}
-		}
-	}
-	
-}
+
 
 // ABOUT 
-section.about {
+.about {
 
 	.bio-wrap {
 		width: $desktop-width;
@@ -986,7 +832,7 @@ section.about {
 }
 
 // SINGLE PROJECT 
-section.single-project {
+.single-project {
 	.hero-wrap {
 		padding: 0 0 3em;
 		.hero {
@@ -1030,9 +876,6 @@ footer {
 		min-height: 115px;
 	}
 	input:focus, textarea:focus {
-		// -moz-box-shadow: inset 0 0 10px rgba(219,79,79,.45);
-		// -webkit-box-shadow: inset 0 0 10px rgba(219,79,79,.45);
-		// box-shadow: inset 0 0 10px rgba(219,79,79,.45);
 		border: 1px solid $red;
 	}
 	input#submit {
