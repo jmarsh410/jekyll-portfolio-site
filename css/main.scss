@@ -4,6 +4,7 @@
 // Colors
 $black: 			#000;
 $white: 			#fff;
+$lred: 				#dc4848;
 $red: 				#d82a2a;
 $lgray: 			#ebebeb;
 $gray: 				#666;
@@ -12,7 +13,7 @@ $blue: 				#2a3039;
 
 // Fonts
 $robo: 				"Roboto", Arial, sans-serif;
-$pt: 				"Pt Sans", Arial, sans-serif;
+$pt: 					"Pt Sans", Arial, sans-serif;
 
 $phone-width: 93.75%; /* 300/320= .9375 */
 $tablet-width: 91.3043478%; /* 420/460 */
@@ -26,7 +27,7 @@ $desktop-skinny: 600px;
 @import "base.scss";
 @import "header.scss";
 @import "work.scss";
-@import "blurb.scss";
+@import "jumbotron.scss";
 @import "resume.scss";
 @import "about.scss";
 @import "single-project.scss";
