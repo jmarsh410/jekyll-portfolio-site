@@ -31,6 +31,9 @@
       letter-spacing: 1px;
       border-radius: 5px;
       background-color: $red;
+      &:hover {
+        background-color: $lred;
+      }
     }
   }
 }
