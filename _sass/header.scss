@@ -1,0 +1,99 @@
+header {
+  background: $black;
+  text-align: center;
+  padding: 20px 0;
+  .logo {
+    padding: 0px 0 20px;
+    text-align: center;
+    a {
+      text-indent: -9999px;
+      display: block;
+      margin: 0 auto;
+      background: url(../images/logo.png) no-repeat;
+      width: 234px; /* 234/460= .508695652 */
+      height: 35px;
+      background-size: 100% auto;
+    }
+  }
+}
+.top-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 10px 0;
+    }
+    a {
+      color: $white;
+      text-transform: uppercase;
+      font-family: $robo;
+      text-decoration: none;
+      font-weight: bold;
+      &.active, &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+// MEDIA QUERIE FOR 480 TO 767 - LANDSCAPE PHONE
+@media screen and (min-width: 480px)  { /* REMOVED and (max-width: 767px) SO THAT THE STYLES THAT I CHANGED WOULD TAKE EFFECT IN NEXT MEDIA QUERIE */
+  .top-nav {
+    ul {
+      li {
+        padding: 0px 0 0 11.9565217%; /* 55/460 */
+        display: inline-block;
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .top-nav {
+      ul {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+}
+
+@media screen and (min-width: 960px) {
+  // MAIN NAV LINKS
+  header {
+    padding: 36px 0;
+    text-align: right;
+    .header-inner {
+      width: $desktop-width;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      padding: 0;
+      a {
+        width: 340px;
+        height: 35px;
+        background-position: 0 50%;
+      }
+    }
+    .top-nav {
+      margin-left: auto;
+      margin-right: 0;
+      ul {
+        li {
+          padding: 0 20px;
+          &:first-child {
+            padding-left: 20px;
+          }
+        }
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

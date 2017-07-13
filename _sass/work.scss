@@ -6,14 +6,15 @@
   overflow: hidden;
   padding: 0 0 3%;
   .work {
-    width: $phone-width;
+    max-width: $desktop-width;
     margin: 0 auto;
+    padding: 0 3%;
   }
   .project {
     position: relative;
     display: block;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px 0 rgba(150,150,150,.75);
@@ -28,7 +29,7 @@
       position: absolute;
       bottom: 0px;
       box-sizing: border-box;
-      padding: 0 5%; /* 15/300 */
+      padding: 5%; /* 15/300 */
       .tags {
         color: $gray;
         font-family: Century, serif;
@@ -37,18 +38,14 @@
       }
     }
   }
-  .hidden-projects {
-    display: none;
-  }
 }
+
+
 
 // MEDIA QUERIE FOR 480 TO 767 - LANDSCAPE PHONE
 @media screen and (min-width: 480px)  { /* REMOVED and (max-width: 767px) SO THAT THE STYLES THAT I CHANGED WOULD TAKE EFFECT IN NEXT MEDIA QUERIE */
   // WORK - HOMEPAGE
   .work-wrap {
-    .work {
-      width: $tablet-width;
-    }
     .projects-wrap {
       display: flex;
       justify-content: space-between;
@@ -65,11 +62,6 @@
   .work-wrap {
     .project {
       width: 46.4285714%; /* 195/420=.464285714 */
-      .overlay {
-        .tags {
-          font-size: 14px;
-        }
-      }
     }
   }
 }
@@ -77,10 +69,6 @@
 @media screen and (min-width: 960px) {
   // WORK - HOMEPAGE
   .work-wrap {
-    .work {
-      min-width: $desktop-width;
-      width: $desktop-width;
-    }
     .project {
       img {
         display: block;
@@ -90,9 +78,6 @@
       .overlay {
         transition: all .2s ease;
         transform: translate(0, 100%);
-        .tags {
-          font-size: 14px;
-        }
       }
       &:hover {
         .overlay {

@@ -1,0 +1,196 @@
+// ABOUT 
+.about {
+  width: 100%;
+  background: $white;
+  box-shadow: 0 -5px 10px rgba(0,0,0,.75);
+  overflow: hidden;
+  padding: 0 0 0em;
+  .bio-wrap {
+    width: $phone-width;
+    margin: 0 auto;
+    img {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 1em;
+    }
+    p {
+      padding: 0px 0 1em;
+    }
+  }
+  .proficiencies-wrap {
+    display: none; /* turning this off until its design is flushed out */
+    width: $phone-width;
+    margin: 0 auto 0px;
+    padding: 1em 0 0;
+    .skill {
+      width: 45%; /* 135/300=.45 */
+      float: left;
+      margin-left: 10%; /* 30/300=.10 */
+      margin-bottom: 10px;
+      &:nth-child(even) {
+        margin-left: 0;
+      }
+    }
+    span.title {
+      font-size: 14px;
+    }
+    img {
+      display: block;
+      display: none;
+      height: 130px;
+      width: auto;
+      margin: 5px auto;
+    }
+    .rating {
+      text-align: left;
+    }
+    .star {
+
+    }
+    .red {
+      color: $red;
+    }
+  }
+  .workflow-wrap {
+    width: $phone-width;
+    margin: 0 auto 0px;
+    padding: 1em 0 0;
+    overflow: hidden;
+    // hide for now
+    display: none;
+  }
+}
+
+// MEDIA QUERIE FOR 480 TO 767 - LANDSCAPE PHONE
+@media screen and (min-width: 480px)  { /* REMOVED and (max-width: 767px) SO THAT THE STYLES THAT I CHANGED WOULD TAKE EFFECT IN NEXT MEDIA QUERIE */
+  // ABOUT 
+  .about {
+    .bio-wrap {
+      width: $tablet-width;
+      margin-bottom: 20px;
+      img {
+        display: block;
+        max-width: 100%; /* 200/420=.476190476 */
+        width: auto;
+        height: auto;
+        max-height: 420px;
+        margin: 0 auto 1em;
+      }
+      .bio {
+        
+      }
+      p {
+        // padding: 0px 0;
+      }
+    }
+    .proficiencies-wrap {
+      width: $tablet-width;
+      margin: 1em auto;
+      overflow: hidden;
+      .skill {
+        width: 26%; /* 135/300=.45 */
+        margin-left: 10%; /* 30/300=.10 */
+        margin-bottom: 15px;
+        &:nth-child(even) {
+          margin-left: 10%;
+        }
+        &:nth-child(3n-1) {
+          margin-left: 0;
+        }
+      }
+      img {
+        display: block;
+        display: none;
+        height: 130px;
+        width: auto;
+        margin: 5px auto;
+      }
+    }
+    .workflow-wrap {
+      width: $tablet-width;
+      margin: 0 auto 20px;
+      overflow: hidden;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  // ABOUT 
+  .about {
+    .bio-wrap {
+      width: $tablet-width;
+      margin-bottom: 2em;
+      img {
+        margin-bottom: 1em;
+        float: left;
+        width: 45%;
+        height: auto;
+        max-height: none;
+      }
+      p {
+        // padding: 0px 0;
+        float: right;
+        width: 50%;
+      }
+    }
+    .proficiencies-wrap {
+      width: $tablet-width;
+      margin: 1em auto 0em;
+      overflow: hidden;
+      .skill {
+        width: 26%; /* 135/300=.45 */
+        float: left;
+        margin-left: 10%; /* 30/300=.10 */
+        margin-bottom: 1em;
+        &:nth-child(even) {
+          margin-left: 10%;
+        }
+        &:nth-child(3n-1) {
+          margin-left: 0;
+        }
+      }
+      img {
+        display: block;
+        display: none;
+        height: 130px;
+        width: auto;
+        margin: 5px auto;
+      }
+    }
+    .workflow-wrap {
+      width: $tablet-width;
+      margin: 1em auto 1em;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  // ABOUT 
+  .about {
+    .bio-wrap {
+      width: $desktop-width;
+    }
+    .proficiencies-wrap {
+      width: $desktop-width;
+    }
+    .workflow-wrap {
+      width: $desktop-width;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

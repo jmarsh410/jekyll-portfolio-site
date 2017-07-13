@@ -1,0 +1,70 @@
+// jumbotron
+.jumbotron-wrap {
+  background: url(../images/nebula-mobile.jpg) 50% -30%; /* NEED TO MAKE A MOBILE VERSION OF NEBULA BACKGROUND */
+  background-attachment: fixed;
+  padding: 60px 0;
+  .jumbotron {
+    max-width: $phone-width;
+    margin: 0 auto;
+    padding: 0 3%;
+    text-align: center;
+    .jumbotron-text {
+      text-transform: uppercase;
+      font-family: $robo;
+      font-weight: bold;
+      font-size: 20px;
+      color: $white;
+      text-shadow: 2px 2px 0 #000;
+      line-height: 25px;
+    }
+    .jumbotron-about {
+      text-align: center;
+      display: inline-block;
+      margin: 2% auto 0;
+      padding: 10px 40px;
+      box-shadow: 3px 3px 0 0 #171717;
+      color: $white;
+      font-family: $robo;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      background-color: $red;
+    }
+  }
+}
+
+// MEDIA QUERIE FOR 480 TO 767 - LANDSCAPE PHONE
+@media screen and (min-width: 480px)  { /* REMOVED and (max-width: 767px) SO THAT THE STYLES THAT I CHANGED WOULD TAKE EFFECT IN NEXT MEDIA QUERIE */
+  // jumbotron
+  .jumbotron-text {
+    font-size: 28px;
+    line-height: 37px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // jumbotron
+  .jumbotron-wrap {
+    background: url(../images/nebula.jpg) 50% 30%; /* NEED TO MAKE A MOBILE VERSION OF NEBULA BACKGROUND */
+    background-size: 100% auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  // jumbotron
+  .jumbotron-wrap {
+    padding: 70px 0;
+    .jumbotron {
+      .jumbotron-text {
+        font-size: 42px;
+        line-height: 69px;
+      }
+      .jumbotron-about {
+        font-size: 21px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
