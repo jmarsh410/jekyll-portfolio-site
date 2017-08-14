@@ -8,4 +8,10 @@ defaults:
       type: "work"
     values:
       layout: "work"
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
