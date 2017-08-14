@@ -23,33 +23,34 @@
     </script>
   </head>
   <body>
+    <div class="siteWrapper">
+      <header class="header" role="banner">
+        <div class="header-inner clear">
+          <div class="logo">
+            <a href="/index.html">Logo</a>
+          </div><!-- .logo-->
+          <nav class="top-nav" role="navigation">
+            <ul>
+              <li><a href="/index.html">Work</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/images/resume.pdf">Resume</a></li>
+            </ul>
+          </nav><!-- .top-nav -->
+        </div><!-- .header_inner -->
+      </header><!-- header -->
 
-    <header class="header" role="banner">
-      <div class="header-inner clear">
-        <div class="logo">
-          <a href="/index.html">Logo</a>
-        </div><!-- .logo-->
-        <nav class="top-nav" role="navigation">
-          <ul>
-            <li><a href="/index.html">Work</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/images/resume.pdf">Resume</a></li>
-          </ul>
-        </nav><!-- .top-nav -->
-      </div><!-- .header_inner -->
-    </header><!-- header -->
+      <main role="main">
+        {{ content }}
+      </main>
 
-    <main role="main">
-      {{ content }}
-    </main>
-
-    <footer role="contentinfo">
-      <div class="footer-inner clear">
-        <div class="copyright">
-          Jered Marshall Copyright &copy; 2017
+      <footer role="contentinfo">
+        <div class="footer-inner clear">
+          <div class="copyright">
+            Jered Marshall Copyright &copy; 2017
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="/js/scripts.js"></script>
