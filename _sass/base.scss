@@ -4,7 +4,12 @@ html {
 }
 body {
   font-family: $pt;
-  font-size: 14px;
+  font-size: 16px;
+}
+.siteWrapper {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 // Headings
 h1 {
@@ -54,7 +59,7 @@ p {
   }
   // project title 
   h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
