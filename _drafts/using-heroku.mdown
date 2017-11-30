@@ -1,0 +1,7 @@
+## Putting it on Heroku
+I wanted to use Node and Express for my server, and I also didn't want to pay money to get things up and running, so I decided to use Heroku. They are a PAAS (platform as a service) and provide free levels for accounts. I created an account and went through the fairly quick [Getting Started Guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) for Node. It goes over set up, deployment, scaling, etc of a Heroku app.
+
+- add heroku files 
+- adding in session id's for logging in
+- refactoring code base to work on either server or client environment
+    - when to use local storage, fetch, etc
